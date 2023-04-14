@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Клиент-серверов приложения</title>
+    <title>Клиент-серверное приложение</title>
 </head>
 <body>
-
     <?php
-    
+
     define("HOST","localhost");
     define("USER","root");
     define("PASSWORD","root");
-    define("DB","schol");
+    define("DB","school");
 
-    //соединение с базой данных
+    // соединение с БД
 
-    $connect = new mysqli(HOST,USER,PASSWORD,DB);
-    if ($connect -> connect_error){
-        exit("Ошибка подключения к БД:" .$connect -> connect_error);
+    $connect = new mysqli (HOST,USER,PASSWORD,DB);
+    if ($connect->connect_error){
+        exit("Ошибка подключение к БД".$connect->connect_error);
     }
 
-    //установить кадировку
-
-    $connect -> set_charset("utft8");
+    //установить кодировку
+    $connect->set_charset("utf8");
 
     //код запроса
 
@@ -32,21 +30,21 @@
 
     //выполнить запрос
 
-    $result = $connect -> query($sql);
+    $result = $connect->query($sql);
 
-    //вести результат запроса на страницу
 
-    while ($row = $result -> fetch_assoc())
-    {
-        echo "<div>
-        $row[l_name], $row[f_name], $row[gender], $row[age]
-            </div>";
-    }
+    //ввести результаты запроса на страницу
+while ($row = $result->fetch_assoc())
+{
+    echo "<div>
+    $row[fname],$row[lname],$row[gender],$row[age]
+    </div>";
+};
 
-    
+
+
 
 
     ?>
-    
 </body>
 </html>

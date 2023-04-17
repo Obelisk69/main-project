@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Клиент-серверов приложения</title>
+    <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 <body>
@@ -19,6 +20,8 @@
         <label for="f">Женский</label><br>
         <input type="submit" value="Добавить">
     </form>
+
+    <div class="content"></div>
 
     <?php
     
@@ -56,6 +59,10 @@
 
 
     ?>
+    <div class="block"></div>
     
+    <div class="message">
+    </div>
+
 </body>
 </html>

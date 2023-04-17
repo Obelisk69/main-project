@@ -25,10 +25,11 @@ require_once("config.php");
      //выполнение запроса
 
      $result = $connect -> query($sql);
+     sleep(3);
      if($result){
-        echo "<p>Данные о студенте добавлены</p>";
+        echo "OK";
      }
      else{
-        echo "<p>Ошибка добавления/p>";
+        echo "ERROR";
      }
 ?>

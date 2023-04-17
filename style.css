@@ -1,0 +1,32 @@
+.block {
+    height: 50px;
+    width: 100px;
+    background: blue;
+}
+.block:hover {
+    background: red;
+}
+
+.message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    transform: translateY(-200px);
+    transition: transform 0.5s ease;
+}
+
+.sucess {
+    background: greenyellow;
+    color: cornflowerblue;
+}
+
+.reject {
+    background: lightcoral;
+    color: cornflowerblue;
+}
+
+.show-message {
+    transform: translateY(0);
+}

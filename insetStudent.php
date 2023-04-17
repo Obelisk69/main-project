@@ -27,7 +27,6 @@ require_once("config.php");
      $result = $connect -> query($sql);
      if($result){
         echo "<p>Данные о студенте добавлены</p>";
-        header("location: index.php");//редирект (переход на главную страницу)
      }
      else{
         echo "<p>Ошибка добавления/p>";

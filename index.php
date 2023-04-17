@@ -61,8 +61,7 @@
     ?>
     <div class="block"></div>
     
-    <div class="message">
-    </div>
+    <div class="message"></div>
 
 </body>
 </html>
